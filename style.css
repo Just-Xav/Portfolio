@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B');
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+html {
+
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: rgb(17, 0, 24);
+    color: white;
+}
+
+header{
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 110;
+}
+
+.stats {
+    display: flex;                 /* This makes the stats section use flexbox */
+    justify-content: space-between; /* Adds space between the two items */
+    align-items: center;           /* Vertically center the items */
+    gap: 2rem;
+
+}
+
+.years, .customers {
+    text-align: center;            /* Centers the text inside each div */
+    min-width: 150px;              /* Ensures consistent width for both sections */
+}
+
+.years h4, .customers h4 {
+    font-size: 5rem;               /* Adjust font size as needed */
+}
+
+.bottomText {
+    margin-top: -1rem;
+    font-size: 20px;
+    color: rgb(196, 196, 196);
+}
+
+.bottomText {
+    margin-top: -1rem;
+    font-size: 20px;
+    color: rgb(196, 196, 196);
+}
+
+.logo{
+    color: whitesmoke;
+
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+    font-size: 5rem;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 600;
+    transition: 0.3 ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+    color: gray;
+    border-bottom: 3px solid;
+}
+
+nav a:hover{
+    transform: scale(1.1);
+}
+
+@media(max-width:995px){
+    nav{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid;
+    }
+
+    nav.active{
+        display: block;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid;
+    }
+
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    height: 70vh;
+    overflow-y: auto;
+}
+
+.title{
+    font-size: 9rem;
+    font-weight: 700;
+    line-height: 1.3;
+    padding-top: 4rem;
+    color: rgb(255, 255, 255);
+}
+
+.subtitle{
+    font-size: 9rem;
+    font-weight: 700;
+    line-height: 1.3;
+    padding-top: 4rem;
+    color: rgb(255, 255, 255);
+    border-bottom: white solid 4px;
+}
+
+.body-text{
+    padding-top: 6rem;
+    font-size: 2rem;
+}
+
+.about-header {
+    margin-bottom: 2rem; /* Adds space between the header and body text */
+    padding: 1rem 0;     /* Adds padding around the title */
+    background-color: #2a2a2a; /* Gives the header a background to distinguish it */
+    border-radius: 5px;
+    text-align: center;   /* Centers the text */
+}
+
+
+span{
+    color: white;
+}
+
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-content h4{
+    font-size: 5rem;
+    margin-top: 5rem;
+}
+
+.bottomText{
+    margin-top: -1rem;
+    font-size: 20px;
+    left: 0;
+    color: rgb(255, 255, 255);
+}
+.bottomText2{
+    margin-top: -1rem;
+    font-size: 15;
+    left: 0;
+    color: rgb(255, 255, 255);
+}
+
+.TypeText{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.TypeText span{
+    position: relative;
+}
+
+.TypeText span::before{
+    content: "Programmer";
+    color: rgb(108, 0, 185);
+    stroke: black;
+    animation: words 20s infinite;
+}
+
+.TypeText span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 1s infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid rgb(32, 32, 32);
+    }
+}
+
+@keyframes words{
+    0%,20%{
+        content: "Fullstack game developer";
+    }
+    21%,40%{
+        content: "Software developer";
+    }
+    41%,60%{
+        content: "Discord bot creator";
+    }
+    61%,80%{
+        content: "Lifelong learner";
+    }
+    81%,100%{
+        content: "Professional programmer";
+    }
+}
+
+@media(max-width: 1000px){
+    .home{
+        gap: 4rem;
+    }
+}
+
+@media(max-width:995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+}
